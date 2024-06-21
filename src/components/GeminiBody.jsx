@@ -23,7 +23,7 @@ const GeminiBody = () => {
   return (
     <div className="flex-1 min-h-[100vh] pb-[15vh] relative">
       <div className="flex items-center justify-between p-5 text-xl text-gray-400">
-        <p>Gemini</p>
+        <p>AskMe</p>
         <CircleUserRound size={40} className="text-softTextColor" />
       </div>
       <div className="max-w-[900px] m-auto">
@@ -99,8 +99,8 @@ const GeminiBody = () => {
             </div>
           </form>
           <p className="text-gray-400 text-sm text-center p-3">
-            Gemini may display inaccurate info, including about people, so
-            double-check its responses. Your privacy and Gemini Apps
+            AskMe may display inaccurate info, including about people, so
+            double-check its responses. Your privacy and AskMe Apps
           </p>
         </div>
       </div>
