@@ -2,14 +2,13 @@
 import React, { useContext } from "react";
 import {
   CircleUserRound,
-  Code,
   Compass,
   Lightbulb,
   Youtube,
+  Code,
   SendHorizontal,
 } from "lucide-react";
 import { Context } from "@/context/ContextProvider";
-
 const GeminiBody = () => {
   const {
     submit,
@@ -20,10 +19,11 @@ const GeminiBody = () => {
     input,
     setInput,
   } = useContext(Context);
+  console.log(loading, "loading");
   return (
     <div className="flex-1 min-h-[100vh] pb-[15vh] relative">
       <div className="flex items-center justify-between p-5 text-xl text-gray-400">
-        <p>AskMe</p>
+        <p>Gemini</p>
         <CircleUserRound size={40} className="text-softTextColor" />
       </div>
       <div className="max-w-[900px] m-auto">
@@ -69,7 +69,7 @@ const GeminiBody = () => {
             </div>
           </>
         ) : (
-          <div>
+          <div className="result">
             <div className="my-10 flex items-center gap-5">
               <CircleUserRound size={40} className="text-softTextColor" />
               <p>{recentPrompts}</p>
@@ -91,14 +91,14 @@ const GeminiBody = () => {
                 value={input}
                 type="text"
                 className="flex-1 bg-transparent border-none outline-none p-2 text-md text-gray-400"
-                placeholder="Enter a prompt here..."
+                placeholder="Enter a prompt here and press enter..."
               />
               <div className="flex cursor-pointer">
                 <SendHorizontal type="submit" size={20} />
               </div>
             </div>
           </form>
-          <p className="text-gray-400 text-sm text-center">
+          <p className="text-gray-400 text-sm text-center p-3">
             Gemini may display inaccurate info, including about people, so
             double-check its responses. Your privacy and Gemini Apps
           </p>
